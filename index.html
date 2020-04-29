@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<title>Black-VelvetALBUM</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<style>
+.w3-sidebar a {font-family: "Roboto", sans-serif}
+body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
+</style>
+<body class="w3-content" style="max-width:1200px"> <!-- กำหนดตรงส่วนเนื้อหาให้มีขนาดคงที่ที่ 1200px -->
+
+<!-- Sidebar/menu -->
+
+<nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar"> <!-- เป็นการกำหนดขนาดสไลด์บาร์หรือแถบเมนูตรงด้านข้างทางซ้ายมือ -->
+  <div class="w3-container w3-display-container w3-padding-16">  <!-- เป็นการเรียกการแสดงผลของการจัดวางรูปแบบเว็บ -->
+    <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+    <h3 class="w3-wide"><b>Black <br><font color="red">Velvet</font><br>ALBUM</b></h3> <!-- การกำหนดรูปแบบฟอนต์ตัวอักษรให้กว้างขึ้น -->
+  </div>
+  <br>
+  <br>
+  <div class="w3-padding-40 w3-large w3-text-grey" style="font-weight:bold"> <!-- กำหนดการขยายความและขนาดของตัวอักษร -->
+    <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-white w3-left-align" id="myBtn">
+        Shop Album <i class="fa fa-caret-down"></i> <!-- แสดงผลการเชื่อมลิ้งค์ของเว็บอีกหน้า -->
+    </a>
+    <div id="demoAcc" class="w3-bar-block w3-hide w3-padding-large w3-medium"> <!-- กำหนดขนาดของบล็อคและข้อความที่ซ่อนอยู่ -->
+        <a href="2019.html" class="w3-bar-item w3-button w3-light-White">2019</a> <!-- สร้างปุ่มให้อยู่ตรงแถบบาร์และเชื่อมลิงค์ -->
+        <a href="2018.html" class="w3-bar-item w3-button">2018</a> <!-- สร้างปุ่มให้อยู่ตรงแถบบาร์และเชื่อมลิงค์ -->
+        <a href="2017.html" class="w3-bar-item w3-button">2017</a> <!-- สร้างปุ่มให้อยู่ตรงแถบบาร์และเชื่อมลิงค์ -->
+        <a href="2016.html" class="w3-bar-item w3-button">2016</a> <!-- สร้างปุ่มให้อยู่ตรงแถบบาร์และเชื่อมลิงค์ -->
+        <a href="2015.html" class="w3-bar-item w3-button">2015</a> <!-- สร้างปุ่มให้อยู่ตรงแถบบาร์และเชื่อมลิงค์ -->
+        <a href="2014.html" class="w3-bar-item w3-button">2014</a> <!-- สร้างปุ่มให้อยู่ตรงแถบบาร์และเชื่อมลิงค์ -->
+      </div>
+  </div>
+
+  <br>
+  <br>
+  <a href="contact.html" class="w3-bar-item w3-button w3-padding">Contact</a> <!-- สร้างปุ่มเชื่อมลิงค์ไปหน้าติดต่อ -->
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding" onclick="document.getElementById('newsletter').style.display='block'">Black VelVet!</a>  
+  <!-- การตั้งค่า effect และการซ่อนข้อความ -->
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge page-content"> <!-- กำหนดเฮดเดอร์ให้มีแถบเมนูและแสดงผลตามหน้าจอ -->
+  <div class="w3-bar-item w3-padding-24 w3-wide">BlackVelvetALBUM</div> <!-- สร้างข้อความบนแถบเมนูโดยกำหนดให้มีการซ่อนข้อความได้และเปิดดูข้อความที่ซ่อน -->
+  <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a> 
+  <!-- สร้างปุ่มไปทางขวา -->
+</header>
+
+<!-- วางซ้อนเอฟเฟกต์เมื่อเปิดแถบด้านข้างบนหน้าจอขนาดเล็ก -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:250px"> <!-- กำหนดขนาดของเว็บหลัก และขอบไปทางซ้าย 250px -->
+<div class="w3-hide-large" style="margin-top:83px"></div> <!-- กำหนดขนาดของการซ่อนเนื้อหาบนหน้าจอ โดยกำหนดขอบไปข้างบน 83px -->
+  
+  <!-- Top header -->
+  <header class="w3-container w3-xlarge"> <!-- กำหนดให้เฮดเดอร์มีรูปแบบขนาดใหญ่ -->
+    <p class="w3-left">PRODUCT</p>  <!-- กำหนดให้อยู่ทางซ้าย -->
+    <p class="w3-right"> <!-- กำหนดให้อยู่ทางขวา -->
+      <i class="fa fa-search"></i> <!-- แสดงไอคอนแว่นขยายใช้ในการค้นหาสินค้า -->
+    </p>
+  </header>
+
+  <!-- Image header -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- โค้ด css กำหนดรูปแบบของ slide -->
+    <style> 
+    * {box-sizing: border-box}
+    body {font-family: Verdana, sans-serif; margin:0}
+    .mySlides {display: none}
+    img {vertical-align: middle;}
+    
+    /* Slideshow container */
+    .slideshow-container {
+      max-width: 1000px;
+      position: relative;
+      margin: auto;
+    }
+    
+    /* Next & previous buttons */
+    .prev, .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 16px;
+      margin-top: -22px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0;
+      user-select: none;
+    }
+    
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    
+    /* On hover, add a black background color with a little bit see-through */
+    .prev:hover, .next:hover {
+      background-color: rgba(0,0,0,0.8);
+    }
+    
+    /* Caption text */
+    .text {
+      color: #f2f2f2;
+      font-size: 15px;
+      padding: 8px 12px;
+      position: absolute;
+      bottom: 8px;
+      width: 100%;
+      text-align: center;
+    }
+    
+    /* Number text (1/3 etc) */
+    .numbertext {
+      color: #f2f2f2;
+      font-size: 12px;
+      padding: 8px 12px;
+      position: absolute;
+      top: 0;
+    }
+    
+    /* The dots/bullets/indicators */
+    .dot {
+      cursor: pointer;
+      height: 10px;
+      width: 10px;
+      margin: 0 2px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+    
+    .active, .dot:hover {
+      background-color: #717171;
+    }
+    
+    /* Fading animation */
+    .fade {
+      -webkit-animation-name: fade;
+      -webkit-animation-duration: 1.5s;
+      animation-name: fade;
+      animation-duration: 1.5s;
+    }
+    
+    @-webkit-keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+    }
+    
+    @keyframes fade {
+      from {opacity: .4} 
+      to {opacity: 1}
+    }
+    
+    /* On smaller screens, decrease text size */
+    @media only screen and (max-width: 300px) {
+      .prev, .next,.text {font-size: 11px}
+    }
+    </style>
+   
+
+
+    <body>
+    <div class="w3-content w3-display-container w3-container slideshow-container">  <!-- กำหนดรูปแบบสไลด์โชว์ -->
+    <div class="mySlides fade"> <!-- รูปภาพที่จะให้แสดง -->
+      <div class="numbertext">1 / 4</div>
+      <img src="https://s3-ap-southeast-1.amazonaws.com/img-in-th/2ead4ad75e9cb8b2754388d0889d4f4b.png" alt="2ead4ad75e9cb8b2754388d0889d4f4b.png" style="width:100%">
+      
+    </div>
+    
+    <div class="mySlides fade"> <!-- รูปภาพที่จะให้แสดง -->
+      <div class="numbertext">2 / 4</div>
+      <img src="https://s3-ap-southeast-1.amazonaws.com/img-in-th/c09ee14d471db64336d3cf30ff357e62.png" alt="c09ee14d471db64336d3cf30ff357e62.png" style="width:100%">
+      
+    </div>
+    
+    <div class="mySlides fade"> <!-- รูปภาพที่จะให้แสดง -->
+      <div class="numbertext">3 / 4</div>
+      <img src="https://sv1.picz.in.th/images/2020/04/27/U5f1AQ.png" alt="U5f1AQ.png" style="width:100%">
+    </div>
+
+    <div class="mySlides fade"> <!-- รูปภาพที่จะให้แสดง -->
+      <div class="numbertext">4 / 4</div>
+      <img src="https://s3-ap-southeast-1.amazonaws.com/img-in-th/58754d83e1d824464084895c5a6c3099.png" alt="58754d83e1d824464084895c5a6c3099.png" style="width:100%">
+    </div>
+    
+    
+    </div>
+
+    <br>
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> <!-- รูปจุดใต้สไลด์ แสดงตำแหน่งของภาพเวลาเลื่อน -->
+      <span class="dot" onclick="currentSlide(2)"></span> <!-- รูปจุดใต้สไลด์ แสดงตำแหน่งของภาพเวลาเลื่อน -->
+      <span class="dot" onclick="currentSlide(3)"></span> <!-- รูปจุดใต้สไลด์ แสดงตำแหน่งของภาพเวลาเลื่อน -->
+      <span class="dot" onclick="currentSlide(4)"></span> <!-- รูปจุดใต้สไลด์ แสดงตำแหน่งของภาพเวลาเลื่อน -->
+    </div>
+    
+    <!-- โค้ด java script ของ sildeshow แสดงการทำงานของสไลด์ -->
+
+    <script>
+     var slideIndex = 0;
+    carousel();
+
+    function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > x.length) {slideIndex = 1}
+    x[slideIndex-1].style.display = "block";
+    setTimeout(carousel, 4000); // เปลี่ยนรูปภาพอัตโนมัติ โดยใช้เวลา 4 วินาที/รูป
+  }
+    </script>
+
+  <div class="w3-container w3-text-grey" id="jeans">
+  <p>Red Velvet</p>
+  </div>
+
+    <!-- โค้ด css ที่ใช้ในการแสดงรูปแบบสินค้าที่จะโชว์ -->
+    <style>
+    /* Popup container - can be anything you want */
+    .popup {
+      position: relative;
+      display: inline-block;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    /* The actual popup */
+    .popup .popuptext {
+      visibility: hidden;
+      width: 160px;
+      background-color: #555;
+      color: #fff;
+      text-align: center;
+      border-radius: 6px;
+      padding: 8px 0;
+      position: absolute;
+      z-index: 1;
+      bottom: 125%;
+      left: 50%;
+      margin-left: -80px;
+    }
+
+    /* Popup arrow */
+    .popup .popuptext::after {
+      content: "";
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      margin-left: -5px;
+      border-width: 5px;
+      border-style: solid;
+      border-color: #555 transparent transparent transparent;
+    }
+
+    /* Toggle this class - hide and show the popup */
+    .popup .show {
+      visibility: visible;
+      -webkit-animation: fadeIn 1s;
+      animation: fadeIn 1s;
+    }
+
+    /* Add animation (fade in the popup) */
+    @-webkit-keyframes fadeIn {
+      from {opacity: 0;} 
+      to {opacity: 1;}
+    }
+
+    @keyframes fadeIn {
+      from {opacity: 0;}
+      to {opacity:1 ;}
+    }
+    </style>
+
+  <!-- Product grid -->
+  <div class="w3-row w3-grayscale"> <!-- กำหนดแถวที่จะแสดงและโทนสีของภาพ -->
+    <div class="w3-col l3 s6"> <!-- แบ่งตามสัดส่วนของหน้าจอ -->
+      <div class="w3-container"> <!-- การประกาศใช้คอนเทนเนอร์ w3 -->
+        <div class="w3-display-container">  <!-- เปิดใช้งานการวางตำแหน่งขององค์ประกอบภายในคอนเทนเนอร์ 6px ซ้ายและขวา paddingtent บนหน้าจอขนาดใหญ่ -->
+        <img src="https://s3-ap-southeast-1.amazonaws.com/img-in-th/c6abb21981e05ca2a665f1406854c1e8.jpg" 
+        alt="c6abb21981e05ca2a665f1406854c1e8.jpg" style="width:100%" />
+        <span class="w3-tag w3-display-topleft">2019</span> <!--กำหนดข้อความให้อยู่ในรูปภาพที่จะแสดง โดยกำหนดให้อยู่ข้างบนทางซ้าย -->
+        <div class="w3-display-middle w3-display-hover">
+          <center><button class="w3-button w3-black"><a href="detail.html">รายละเอียดสินค้า</a></i></button> <!--กำหนดปุ่มสีดำเชื่อมลิ้งค์ไปยัง details ของสินค้า-->
+            <br>
+            <br>
+          <button class="w3-button w3-black"><a href="shoppingcart_1.html">สั่งซื้อสินค้า</a><i class="fa fa-shopping-cart"></i></button></center>  
+          <!--กำหนดปุ่มสีดำเชื่อมลิ้งค์ไปยัง Shoppingcart-->
+          </div> 
+        </div>
+        <p>'The ReVe Festival' Finale<br><b>฿730.00</b></p>
+      </div>
+
+      
+
+      <div class="w3-col l3 s6"></div>
+      <div class="w3-container">  <!-- การประกาศใช้คอนเทนเนอร์ w3 -->
+        <div class="w3-display-container"> <!-- เปิดใช้งานการวางตำแหน่งขององค์ประกอบภายในคอนเทนเนอร์ 6px ซ้ายและขวา paddingtent บนหน้าจอขนาดใหญ่ -->
+        <img src="https://www.img.live/images/2020/04/27/powerup.jpg" 
+            alt="powerup.jpg" style="width:100%" /></a>
+            <span class="w3-tag w3-display-topleft">2018</span> <!--กำหนดข้อความให้อยู่ในรูปภาพที่จะแสดง โดยกำหนดให้อยู่ข้างบนทางซ้าย -->
+        <div class="w3-display-middle w3-display-hover">
+          <center><button class="w3-button w3-black" ><a href="detail.html">รายละเอียดสินค้า</a></i></button> <!--กำหนดปุ่มสีดำเชื่อมลิ้งค์ไปยัง details ของสินค้า-->
+            <br>
+            <br>
+          <button class="w3-button w3-black" ><a href="shoppingcart_1.html">สั่งซื้อสินค้า</a><i class="fa fa-shopping-cart"></i></button></center>  
+          <!--กำหนดปุ่มสีดำเชื่อมลิ้งค์ไปยัง Shoppingcart-->
+          </div>
+        </div>
+        <p>Summer Mini Album - Summer Magic <br><b>฿770.00</b></p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">  <!-- การประกาศใช้คอนเทนเนอร์ w3 -->
+        <div class="w3-display-container"> <!-- เปิดใช้งานการวางตำแหน่งขององค์ประกอบภายในคอนเทนเนอร์ 6px ซ้ายและขวา paddingtent บนหน้าจอขนาดใหญ่ -->
+            <img src="https://s3-ap-southeast-1.amazonaws.com/img-in-th/94e2407904c969a829524fba590b4f34.jpg" 
+            alt="94e2407904c969a829524fba590b4f34.jpg" style="width:100%" />
+          <span class="w3-tag w3-display-topleft">2019</span> <!--กำหนดข้อความให้อยู่ในรูปภาพที่จะแสดง โดยกำหนดให้อยู่ข้างบนทางซ้าย -->
+          <div class="w3-display-middle w3-display-hover">
+            <center><button class="w3-button w3-black" ><a href="detail.html">รายละเอียดสินค้า</a></i></button> <!--กำหนดปุ่มสีดำเชื่อมลิ้งค์ไปยัง details ของสินค้า-->
+              <br>
+              <br>
+            <button class="w3-button w3-black" ><a href="shoppingcart_1.html">สั่งซื้อสินค้า</a><i class="fa fa-shopping-cart"></i></button></center>  
+            <!--กำหนดปุ่มสีดำเชื่อมลิ้งค์ไปยัง Shoppingcart-->
+          </div>
+        </div>
+        <p>'The ReVe Festival' Day 2<br><b>฿690.00</b></p>
+      </div>
+
+      <div class="w3-col l3 s6"></div>
+      <div class="w3-container">  <!-- การประกาศใช้คอนเทนเนอร์ w3 -->
+        <div class="w3-display-container"> <!-- เปิดใช้งานการวางตำแหน่งขององค์ประกอบภายในคอนเทนเนอร์ 6px ซ้ายและขวา paddingtent บนหน้าจอขนาดใหญ่ -->
+            <img src="https://www.img.live/images/2020/04/27/badboy.jpg" 
+                alt="badboy.jpg" style="width:100%" /></a>
+            <span class="w3-tag w3-display-topleft">2018</span> <!--กำหนดข้อความให้อยู่ในรูปภาพที่จะแสดง โดยกำหนดให้อยู่ข้างบนทางซ้าย -->
+        <div class="w3-display-middle w3-display-hover">
+          <center><button class="w3-button w3-black" ><a href="detail.html">รายละเอียดสินค้า</a></i></button> <!--กำหนดปุ่มสีดำเชื่อมลิ้งค์ไปยัง details ของสินค้า-->
+            <br>
+            <br>
+          <button class="w3-button w3-black" ><a href="shoppingcart_1.html">สั่งซื้อสินค้า</a><i class="fa fa-shopping-cart"></i></button></center>  
+          <!--กำหนดปุ่มสีดำเชื่อมลิ้งค์ไปยัง Shoppingcart-->
+          </div>
+        </div>
+        <p>The 2nd Album Repackage - The Perfect Red Velvet <br><b>฿690.00</b></p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container">  <!-- การประกาศใช้คอนเทนเนอร์ w3 -->
+        <div class="w3-display-container"> <!-- เปิดใช้งานการวางตำแหน่งขององค์ประกอบภายในคอนเทนเนอร์ 6px ซ้ายและขวา paddingtent บนหน้าจอขนาดใหญ่ -->
+        <img src="https://s3-ap-southeast-1.amazonaws.com/img-in-th/97641967a8ae5ae3f6836f557ec2e4d7.jpg" 
+          alt="97641967a8ae5ae3f6836f557ec2e4d7.jpg" style="width:100%" />
+          <span class="w3-tag w3-display-topleft">2019</span> <!--กำหนดข้อความให้อยู่ในรูปภาพที่จะแสดง โดยกำหนดให้อยู่ข้างบนทางซ้าย -->
+          <div class="w3-display-middle w3-display-hover">
+            <center><button class="w3-button w3-black"><a href="detail.html">รายละเอียดสินค้า</a></i></button> <!--กำหนดปุ่มสีดำเชื่อมลิ้งค์ไปยัง details ของสินค้า-->
+              <br>
+              <br>
+            <button class="w3-button w3-black" ><a href="shoppingcart_1.html">สั่งซื้อสินค้า</a><i class="fa fa-shopping-cart"></i></button></center>  
+            <!--กำหนดปุ่มสีดำเชื่อมลิ้งค์ไปยัง Shoppingcart-->
+          </div>
+        </div>
+        <p>'The ReVe Festival' Day 1<br><b>฿770.00</b></p>
+      </div>
+
+      <div class="w3-col l3 s6"></div>
+      <div class="w3-container">  <!-- การประกาศใช้คอนเทนเนอร์ w3 -->
+        <div class="w3-display-container"> <!-- เปิดใช้งานการวางตำแหน่งขององค์ประกอบภายในคอนเทนเนอร์ 6px ซ้ายและขวา paddingtent บนหน้าจอขนาดใหญ่ -->
+            <img src="https://www.img.live/images/2020/04/27/peekaboo.jpg" 
+                alt="peekaboo.jpg" style="width:100%" /></a> 
+            <span class="w3-tag w3-display-topleft">2017</span> <!--กำหนดข้อความให้อยู่ในรูปภาพที่จะแสดง โดยกำหนดให้อยู่ข้างบนทางซ้าย -->
+        <div class="w3-display-middle w3-display-hover">
+          <center><button class="w3-button w3-black" ><a href="detail.html">รายละเอียดสินค้า</a></i></button> <!--กำหนดปุ่มสีดำเชื่อมลิ้งค์ไปยัง details ของสินค้า-->
+            <br>
+            <br>
+          <button class="w3-button w3-black" ><a href="shoppingcart_1.html">สั่งซื้อสินค้า</a><i class="fa fa-shopping-cart"></i></button></center>  
+          <!--กำหนดปุ่มสีดำเชื่อมลิ้งค์ไปยัง Shoppingcart-->
+          </div>
+        </div>
+        <p>The 2nd Album - Perfect Velvet <br><b>฿590.00</b></p>
+      </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container"> <!-- การประกาศใช้คอนเทนเนอร์ w3 -->
+        <div class="w3-display-container"> <!-- เปิดใช้งานการวางตำแหน่งขององค์ประกอบภายในคอนเทนเนอร์ 6px ซ้ายและขวา paddingtent บนหน้าจอขนาดใหญ่ -->
+        <img src="https://www.img.live/images/2020/04/27/RBB.jpg" 
+            alt="RBB.jpg" style="width:100%" /></a>
+            <span class="w3-tag w3-display-topleft">2018</span> <!--กำหนดข้อความให้อยู่ในรูปภาพที่จะแสดง โดยกำหนดให้อยู่ข้างบนทางซ้าย -->
+            <div class="w3-display-middle w3-display-hover"> 
+              <center><button class="w3-button w3-black" ><a href="detail.html">รายละเอียดสินค้า</a></i></button> <!--กำหนดปุ่มสีดำเชื่อมลิ้งค์ไปยัง details ของสินค้า-->
+                <br>
+                <br>
+              <button class="w3-button w3-black" ><a href="shoppingcart_1.html">สั่งซื้อสินค้า</a><i class="fa fa-shopping-cart"></i></button></center>  
+              <!--กำหนดปุ่มสีดำเชื่อมลิ้งค์ไปยัง Shoppingcart-->
+          </div>
+        </div>
+        <p>The 5th Mini Album - RBB<br><b>฿450.00</b></p>
+      </div>
+
+      <div class="w3-col l3 s6"></div>
+      <div class="w3-container"> <!-- การประกาศใช้คอนเทนเนอร์ w3 -->
+        <div class="w3-display-container"> <!-- เปิดใช้งานการวางตำแหน่งขององค์ประกอบภายในคอนเทนเนอร์ 6px ซ้ายและขวา paddingtent บนหน้าจอขนาดใหญ่ -->
+            <img src="https://www.img.live/images/2020/04/27/redflavor.jpg" 
+                alt="redflavor.jpg" style="width:100%" /></a>
+            <span class="w3-tag w3-display-topleft">2017</span> <!--กำหนดข้อความให้อยู่ในรูปภาพที่จะแสดง โดยกำหนดให้อยู่ข้างบนทางซ้าย -->
+        <div class="w3-display-middle w3-display-hover">
+          <center><button class="w3-button w3-black" ><a href="detail.html">รายละเอียดสินค้า</a></i></button> <!--กำหนดปุ่มสีดำเชื่อมลิ้งค์ไปยัง details ของสินค้า-->
+            <br>
+            <br>
+          <button class="w3-button w3-black" ><a href="shoppingcart_1.html">สั่งซื้อสินค้า</a><i class="fa fa-shopping-cart"></i></button></center>  
+          <!--กำหนดปุ่มสีดำเชื่อมลิ้งค์ไปยัง Shoppingcart-->
+          </div> 
+        </div>
+        <p>Summer Special Album - The Red Summer <br><b>฿540.00</b></p>
+      </div>
+    </div>
+  </div>
+
+    <div class="w3-row w3-grayscale">
+        <div class="w3-col l3 s6">
+          <div class="w3-container"> <!-- การประกาศใช้คอนเทนเนอร์ w3 -->
+            <div class="w3-display-container"> <!-- เปิดใช้งานการวางตำแหน่งขององค์ประกอบภายในคอนเทนเนอร์ 6px ซ้ายและขวา paddingtent บนหน้าจอขนาดใหญ่ -->
+                <img src="https://www.img.live/images/2020/04/27/rookie.jpg" 
+                    alt="rookie.jpg" style="width:100%" /></a>
+            <span class="w3-tag w3-display-topleft">2017</span> <!--กำหนดข้อความให้อยู่ในรูปภาพที่จะแสดง โดยกำหนดให้อยู่ข้างบนทางซ้าย -->
+            <div class="w3-display-middle w3-display-hover">
+              <center><button class="w3-button w3-black" ><a href="detail.html">รายละเอียดสินค้า</a></i></button> <!--กำหนดปุ่มสีดำเชื่อมลิ้งค์ไปยัง details ของสินค้า-->
+                <br>
+                <br>
+              <button class="w3-button w3-black" ><a href="shoppingcart_1.html">สั่งซื้อสินค้า</a><i class="fa fa-shopping-cart"></i></button></center>  
+              <!--กำหนดปุ่มสีดำเชื่อมลิ้งค์ไปยัง Shoppingcart-->
+              </div>
+            </div>
+            <p>The 4th Mini Album - Rookie<br><b>฿690.00</b></p>
+          </div>
+
+    <div class="w3-col l3 s6"></div>
+        <div class="w3-container"> <!-- การประกาศใช้คอนเทนเนอร์ w3 -->
+            <div class="w3-display-container"> <!-- เปิดใช้งานการวางตำแหน่งขององค์ประกอบภายในคอนเทนเนอร์ 6px ซ้ายและขวา paddingtent บนหน้าจอขนาดใหญ่ -->
+                <img src="https://www.img.live/images/2020/04/27/icc.jpg" 
+                    alt="icc.jpg" style="width:100%" /></a>
+                <span class="w3-tag w3-display-topleft">2015</span> <!--กำหนดข้อความให้อยู่ในรูปภาพที่จะแสดง โดยกำหนดให้อยู่ข้างบนทางซ้าย -->
+            <div class="w3-display-middle w3-display-hover">
+              <center><button class="w3-button w3-black" ><a href="detail.html">รายละเอียดสินค้า</a></i></button> <!--กำหนดปุ่มสีดำเชื่อมลิ้งค์ไปยัง details ของสินค้า-->
+                <br>
+                <br>
+              <button class="w3-button w3-black" ><a href="shoppingcart_1.html">สั่งซื้อสินค้า</a><i class="fa fa-shopping-cart"></i></button></center>  
+              <!--กำหนดปุ่มสีดำเชื่อมลิ้งค์ไปยัง Shoppingcart-->
+              </div> 
+            </div>
+            <p>The 1st Mini Album - Ice Cream Cake <br><b>฿590.00</b></p>
+          </div>
+        </div>
+
+    <div class="w3-col l3 s6">
+        <div class="w3-container"> <!-- การประกาศใช้คอนเทนเนอร์ w3 -->
+            <div class="w3-display-container"> <!-- เปิดใช้งานการวางตำแหน่งขององค์ประกอบภายในคอนเทนเนอร์ 6px ซ้ายและขวา paddingtent บนหน้าจอขนาดใหญ่ -->
+                <img src="https://www.img.live/images/2020/04/27/rsrl.jpg" 
+                    alt="rsrl.jpg" style="width:100%" /></a>
+                <span class="w3-tag w3-display-topleft">2016</span> <!--กำหนดข้อความให้อยู่ในรูปภาพที่จะแสดง โดยกำหนดให้อยู่ข้างบนทางซ้าย -->
+            <div class="w3-display-middle w3-display-hover">
+              <center><button class="w3-button w3-black" ><a href="detail.html">รายละเอียดสินค้า</a></i></button> <!--กำหนดปุ่มสีดำเชื่อมลิ้งค์ไปยัง details ของสินค้า-->
+                <br>
+                <br>
+              <button class="w3-button w3-black" ><a href="shoppingcart_1.html">สั่งซื้อสินค้า</a><i class="fa fa-shopping-cart"></i></button></center>  
+              <!--กำหนดปุ่มสีดำเชื่อมลิ้งค์ไปยัง Shoppingcart-->
+            </div>
+              </div>
+            <p>The 3rd Mini Album - Russian Roulette<br><b>฿550.00</b></p>
+        </div>
+
+    <div class="w3-col l3 s6"></div>
+        <div class="w3-container">  <!-- การประกาศใช้คอนเทนเนอร์ w3 -->
+          <div class="w3-display-container"> <!-- เปิดใช้งานการวางตำแหน่งขององค์ประกอบภายในคอนเทนเนอร์ 6px ซ้ายและขวา paddingtent บนหน้าจอขนาดใหญ่ -->
+            <img src="https://www.img.live/images/2020/04/27/benatural.jpg" 
+                alt="benatural.jpg" style="width:100%" /></a>
+              <span class="w3-tag w3-display-topleft">2014</span> <!--กำหนดข้อความให้อยู่ในรูปภาพที่จะแสดง โดยกำหนดให้อยู่ข้างบนทางซ้าย -->
+          <div class="w3-display-middle w3-display-hover">
+            <center><button class="w3-button w3-black" ><a href="detail.html">รายละเอียดสินค้า</a></i></button> <!--กำหนดปุ่มสีดำเชื่อมลิ้งค์ไปยัง details ของสินค้า-->
+              <br>
+              <br>
+            <button class="w3-button w3-black" ><a href="shoppingcart_1.html">สั่งซื้อสินค้า</a><i class="fa fa-shopping-cart"></i></button></center>  
+            <!--กำหนดปุ่มสีดำเชื่อมลิ้งค์ไปยัง Shoppingcart-->
+            </div>
+          </div>
+          <p>The 2nd Single 'Be Natural' <br><b>฿550.00</b></p>
+        </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+        <div class="w3-container"> <!-- การประกาศใช้คอนเทนเนอร์ w3 -->
+          <div class="w3-display-container"> <!-- เปิดใช้งานการวางตำแหน่งขององค์ประกอบภายในคอนเทนเนอร์ 6px ซ้ายและขวา paddingtent บนหน้าจอขนาดใหญ่ -->
+            <img src="https://www.img.live/images/2020/04/27/noth.jpg" 
+                alt="noth.jpg" style="width:100%" /></a>
+            <span class="w3-tag w3-display-topleft">2016</span> <!--กำหนดข้อความให้อยู่ในรูปภาพที่จะแสดง โดยกำหนดให้อยู่ข้างบนทางซ้าย -->
+            <div class="w3-display-middle w3-display-hover">
+              <center><button class="w3-button w3-black" ><a href="detail.html">รายละเอียดสินค้า</a></i></button> <!--กำหนดปุ่มสีดำเชื่อมลิ้งค์ไปยัง details ของสินค้า-->
+                <br>
+                <br>
+              <button class="w3-button w3-black" ><a href="shoppingcart_1.html">สั่งซื้อสินค้า</a><i class="fa fa-shopping-cart"></i></button></center> 
+               <!--กำหนดปุ่มสีดำเชื่อมลิ้งค์ไปยัง Shoppingcart-->
+            </div>
+          </div>
+          <p>The 2 Mini Album - The Velvet<br><b>฿550.00</b></p>
+        </div>
+
+    <div class="w3-col l3 s6"></div>
+        <div class="w3-container"> <!-- การประกาศใช้คอนเทนเนอร์ w3 -->
+          <div class="w3-display-container"> <!-- เปิดใช้งานการวางตำแหน่งขององค์ประกอบภายในคอนเทนเนอร์ 6px ซ้ายและขวา paddingtent บนหน้าจอขนาดใหญ่ -->
+            <img src="https://www.img.live/images/2020/04/27/happiness.jpg" 
+                alt="happiness.jpg" style="width:100%" /></a>
+              <span class="w3-tag w3-display-topleft">2014</span> <!--กำหนดข้อความให้อยู่ในรูปภาพที่จะแสดง โดยกำหนดให้อยู่ข้างบนทางซ้าย -->
+          <div class="w3-display-middle w3-display-hover">
+            <center><button class="w3-button w3-black" ><a href="detail.html">รายละเอียดสินค้า</a></i></button> <!--กำหนดปุ่มสีดำเชื่อมลิ้งค์ไปยัง details ของสินค้า-->
+              <br>
+              <br>
+            <button class="w3-button w3-black" ><a href="shoppingcart_1.html">สั่งซื้อสินค้า</a><i class="fa fa-shopping-cart"></i></button></center> 
+             <!--กำหนดปุ่มสีดำเชื่อมลิ้งค์ไปยัง Shoppingcart-->
+            </div>
+          </div>
+          <p>The 1st Single 'Happiness'<br><b>฿550.00</b></p>
+        </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+        <div class="w3-container"> <!-- การประกาศใช้คอนเทนเนอร์ w3 -->
+          <div class="w3-display-container"> <!-- เปิดใช้งานการวางตำแหน่งขององค์ประกอบภายในคอนเทนเนอร์ 6px ซ้ายและขวา paddingtent บนหน้าจอขนาดใหญ่ -->
+           <img src="https://www.img.live/images/2020/04/27/dumbdumb.jpg" 
+                alt="dumbdumb.jpg" style="width:100%" /></a>
+              <span class="w3-tag w3-display-topleft">2015</span> <!--กำหนดข้อความให้อยู่ในรูปภาพที่จะแสดง โดยกำหนดให้อยู่ข้างบนทางซ้าย -->
+              <div class="w3-display-middle w3-display-hover"> 
+                <center><button class="w3-button w3-black" ><a href="detail.html">รายละเอียดสินค้า</a></i></button> <!--กำหนดปุ่มสีดำเชื่อมลิ้งค์ไปยัง details ของสินค้า-->
+                  <br>
+                  <br>
+                <button class="w3-button w3-black" ><a href="shoppingcart_1.html">สั่งซื้อสินค้า</a><i class="fa fa-shopping-cart"></i></button></center>  
+                <!--กำหนดปุ่มสีดำเชื่อมลิ้งค์ไปยัง Shoppingcart-->
+            </div>
+          </div>
+          <p>The 1st Album - The Red<br><b>฿590.00</b></p>
+    </div>
+</div>
+
+<div class="w3-container w3-text-grey" id="jeans">
+  <p>Blackpink</p>
+</div>
+<!-- Product grid -->
+  <div class="w3-row w3-container">
+    <div class="w3-col l3 s6">
+      <div class="w3-container"> <!-- การประกาศใช้คอนเทนเนอร์ w3 -->
+        <div class="w3-display-container"> <!-- เปิดใช้งานการวางตำแหน่งขององค์ประกอบภายในคอนเทนเนอร์ 6px ซ้ายและขวา paddingtent บนหน้าจอขนาดใหญ่ -->
+         <img src="https://www.img.live/images/2020/04/27/killthislove.jpg" 
+            alt="killthislove.jpg" style="width:100%" /></a>
+        <span class="w3-tag w3-display-topleft">2019</span> <!--กำหนดข้อความให้อยู่ในรูปภาพที่จะแสดง โดยกำหนดให้อยู่ข้างบนทางซ้าย -->
+        <div class="w3-display-middle w3-display-hover">
+          <center><button class="w3-button w3-black" ><a href="detail.html">รายละเอียดสินค้า</a></i></button> <!--กำหนดปุ่มสีดำเชื่อมลิ้งค์ไปยัง details ของสินค้า-->
+            <br>
+            <br>
+          <button class="w3-button w3-black" ><a href="shoppingcart_2.html">สั่งซื้อสินค้า</a><i class="fa fa-shopping-cart"></i></button></center> 
+           <!--กำหนดปุ่มสีดำเชื่อมลิ้งค์ไปยัง Shoppingcart-->
+          </div>
+        </div>
+        <p>The 2nd Mini Album - Kill This Love<br><b>฿1,550.00</b></p>
+      </div>
+
+<div class="w3-col l3 s6"></div>
+      <div class="w3-container"> <!-- การประกาศใช้คอนเทนเนอร์ w3 -->
+        <div class="w3-display-container"> <!-- เปิดใช้งานการวางตำแหน่งขององค์ประกอบภายในคอนเทนเนอร์ 6px ซ้ายและขวา paddingtent บนหน้าจอขนาดใหญ่ -->
+         <img src="https://www.img.live/images/2020/04/27/boombayah3c642.jpg" 
+            alt="boombayah3c642.jpg" style="width:100%" /></a>
+            <span class="w3-tag w3-display-topleft">2016</span> <!--กำหนดข้อความให้อยู่ในรูปภาพที่จะแสดง โดยกำหนดให้อยู่ข้างบนทางซ้าย -->
+        <div class="w3-display-middle w3-display-hover">
+          <center><button class="w3-button w3-black" ><a href="detail.html">รายละเอียดสินค้า</a></i></button> <!--กำหนดปุ่มสีดำเชื่อมลิ้งค์ไปยัง details ของสินค้า-->
+            <br>
+            <br>
+          <button class="w3-button w3-black" ><a href="shoppingcart_2.html">สั่งซื้อสินค้า</a><i class="fa fa-shopping-cart"></i></button></center> 
+           <!--กำหนดปุ่มสีดำเชื่อมลิ้งค์ไปยัง Shoppingcart-->
+          </div> 
+        </div>
+        <p>The 1st Single Album 'Square One' <br><b>฿650.00</b></p>
+      </div>
+    </div>
+
+<div class="w3-col l3 s6">
+      <div class="w3-container"> <!-- การประกาศใช้คอนเทนเนอร์ w3 -->
+        <div class="w3-display-container"> <!-- เปิดใช้งานการวางตำแหน่งขององค์ประกอบภายในคอนเทนเนอร์ 6px ซ้ายและขวา paddingtent บนหน้าจอขนาดใหญ่ -->
+          <img src="https://www.img.live/images/2020/04/27/dddd.jpg" 
+            alt="dddd.jpg" style="width:100%" /></a>
+          <span class="w3-tag w3-display-topleft">2018</span> <!--กำหนดข้อความให้อยู่ในรูปภาพที่จะแสดง โดยกำหนดให้อยู่ข้างบนทางซ้าย -->
+          <div class="w3-display-middle w3-display-hover">
+            <center><button class="w3-button w3-black" ><a href="detail.html">รายละเอียดสินค้า</a></i></button> <!--กำหนดปุ่มสีดำเชื่อมลิ้งค์ไปยัง details ของสินค้า-->
+              <br>
+              <br>
+            <button class="w3-button w3-black" ><a href="shoppingcart_2.html">สั่งซื้อสินค้า</a><i class="fa fa-shopping-cart"></i></button></center> 
+             <!--กำหนดปุ่มสีดำเชื่อมลิ้งค์ไปยัง Shoppingcart-->
+          </div>
+        </div>
+        <p>The 1st Mini Album - Square Up<br><b>฿690.00</b></p>
+    </div>
+
+<div class="w3-col l3 s6"></div>
+    <div class="w3-container"> <!-- การประกาศใช้คอนเทนเนอร์ w3 -->
+      <div class="w3-display-container"> <!-- เปิดใช้งานการวางตำแหน่งขององค์ประกอบภายในคอนเทนเนอร์ 6px ซ้ายและขวา paddingtent บนหน้าจอขนาดใหญ่ -->
+          <span class="w3-tag w3-display-topleft"></span>
+      <div class="w3-display-middle w3-display-hover">
+          <button class="w3-button w3-black"><i class="fa fa-shopping-cart"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-col l3 s6">
+    <div class="w3-container"> <!-- การประกาศใช้คอนเทนเนอร์ w3 -->
+      <div class="w3-display-container"> <!-- เปิดใช้งานการวางตำแหน่งขององค์ประกอบภายในคอนเทนเนอร์ 6px ซ้ายและขวา paddingtent บนหน้าจอขนาดใหญ่ -->
+        <img src="https://www.img.live/images/2020/04/27/asif34d9d.jpg" 
+          alt="asif34d9d.jpg" style="width:100%" /></a>
+        <span class="w3-tag w3-display-topleft">2017</span> <!--กำหนดข้อความให้อยู่ในรูปภาพที่จะแสดง โดยกำหนดให้อยู่ข้างบนทางซ้าย -->
+        <div class="w3-display-middle w3-display-hover">
+          <center><button class="w3-button w3-black" ><a href="detail.html">รายละเอียดสินค้า</a></i></button> <!--กำหนดปุ่มสีดำเชื่อมลิ้งค์ไปยัง details ของสินค้า-->
+            <br>
+            <br>
+          <button class="w3-button w3-black" ><a href="shoppingcart_2.html">สั่งซื้อสินค้า</a><i class="fa fa-shopping-cart"></i></button></center>  
+          <!--กำหนดปุ่มสีดำเชื่อมลิ้งค์ไปยัง Shoppingcart-->
+        </div>
+      </div>
+      <p>Digital Single 'As if it's your last'<br><b>฿550.00</b></p>
+    </div>
+  
+  <div class="w3-col l3 s6"></div>
+    <div class="w3-container"> <!-- การประกาศใช้คอนเทนเนอร์ w3 -->
+      <div class="w3-display-container"> <!-- เปิดใช้งานการวางตำแหน่งขององค์ประกอบภายในคอนเทนเนอร์ 6px ซ้ายและขวา paddingtent บนหน้าจอขนาดใหญ่ -->
+          <span class="w3-tag w3-display-topleft"></span>
+      <div class="w3-display-middle w3-display-hover">
+          <button class="w3-button w3-black"> <i class="fa fa-shopping-cart"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="w3-col l3 s6">
+    <div class="w3-container"> <!-- การประกาศใช้คอนเทนเนอร์ w3 -->
+      <div class="w3-display-container"> <!-- เปิดใช้งานการวางตำแหน่งขององค์ประกอบภายในคอนเทนเนอร์ 6px ซ้ายและขวา paddingtent บนหน้าจอขนาดใหญ่ -->
+        <img src="https://www.img.live/images/2020/04/27/playing.jpg" 
+          alt="playing.jpg" style="width:100%" /></a>
+          <span class="w3-tag w3-display-topleft">2016</span> <!--กำหนดข้อความให้อยู่ในรูปภาพที่จะแสดง โดยกำหนดให้อยู่ข้างบนทางซ้าย -->
+          <div class="w3-display-middle w3-display-hover"> 
+            <center><button class="w3-button w3-black" ><a href="detail.html">รายละเอียดสินค้า</a></i></button> <!--กำหนดปุ่มสีดำเชื่อมลิ้งค์ไปยัง details ของสินค้า-->
+              <br>
+              <br>
+            <button class="w3-button w3-black" ><a href="shoppingcart_2.html">สั่งซื้อสินค้า</a><i class="fa fa-shopping-cart"></i></button></center> 
+             <!--กำหนดปุ่มสีดำเชื่อมลิ้งค์ไปยัง Shoppingcart-->
+        </div>
+      </div>
+      <p>The 2nd Single Album 'Square Two'<br><b>฿650.00</b></p>
+    </div>
+  </div>
+
+  <div class="w3-col s4 w3-justify"></div>
+</div></div>
+
+<!-- Newsletter Modal -->
+<div id="newsletter" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom" style="padding:10px">
+    <div class="w3-container w3-white w3-center">
+      <i onclick="document.getElementById('newsletter').style.display='none'" class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>
+      <p>RED VELVET X BLACK PINK</p>
+      <img src="https://s3-ap-southeast-1.amazonaws.com/img-in-th/389b05ce2474b0214ee8537bcce23e6c.md.png" alt="389b05ce2474b0214ee8537bcce23e6c.md.png" border="0"></a>
+      <br><br><img src="https://s3-ap-southeast-1.amazonaws.com/img-in-th/aa8e716e5911e9ac247e9636bf2ca864.md.png" alt="aa8e716e5911e9ac247e9636bf2ca864.md.png" border="0"></a>
+      <br><br><button type="button" class="w3-button w3-padding-large w3-red w3-margin-bottom" onclick="document.getElementById('newsletter').style.display='none'">Close</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// Accordion 
+function myAccFunc() {
+  var x = document.getElementById("demoAcc");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+// Click on the "Jeans" link on page load to open the accordion for demo purposes
+document.getElementById("myBtn").click();
+
+
+// Open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+</script>
+
+</body>
+</html>
